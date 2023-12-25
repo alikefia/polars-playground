@@ -2,8 +2,8 @@
 fmt:
     #!/usr/bin/env bash
     just --unstable --fmt
-    ruff format ${ROOT}/py
-    ruff check ${ROOT}/py
+    ruff format py
+    ruff check --fix py
 
 # install deps
 deps:
@@ -15,3 +15,7 @@ deps:
 # build polars
 @build:
     (cd deps/polars/py-polars && maturin develop)
+
+# run current script
+@run:
+    python py/i-${CURRENT}.py
