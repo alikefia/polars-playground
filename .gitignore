@@ -1,4 +1,2 @@
-/.direnv
-/.local.envrc
-
 /data
+/.venv

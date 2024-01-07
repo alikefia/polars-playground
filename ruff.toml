@@ -1,3 +1,0 @@
-[lint.isort]
-section-order = ["future", "standard-library", "first-party", "local-folder", "third-party"]
-

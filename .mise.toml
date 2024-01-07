@@ -1,0 +1,22 @@
+tasks.env = "which python"
+
+[tools]
+python = { version = "3.12", virtualenv = "{{config_root}}/.venv" }
+
+[tasks.deps]
+description = "install deps"
+run = [
+  "pip install -U pip",
+  "pip install -U -r requirements.txt",
+  "pip install -U -r requirements.dev.txt",
+]
+
+[tasks.build]
+description = "build polars"
+run = "maturin develop"
+dir = "deps/polars/py-polars"
+
+[tasks.fmt]
+description = "format and lint code (just and python)"
+run = ["ruff format py", "ruff check --fix py"]
+sources = ["py/**"]
