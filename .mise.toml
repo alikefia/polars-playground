@@ -1,5 +1,3 @@
-tasks.env = "which python"
-
 [tools]
 python = { version = "3.12", virtualenv = "{{config_root}}/.venv" }
 
