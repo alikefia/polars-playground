@@ -15,6 +15,6 @@ run = "maturin develop"
 dir = "deps/polars/py-polars"
 
 [tasks.fmt]
-description = "format and lint code (just and python)"
+description = "format and lint code (python)"
 run = ["ruff format py", "ruff check --fix py"]
 sources = ["py/**"]
